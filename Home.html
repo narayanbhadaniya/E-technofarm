@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <title>Home</title>
+</head>
+
+<body bgcolor="white">
+
+  <div class="header">
+    <a href="Home.html" class="logo">E-TECHNOFARM</a>
+
+    <div class="header-right">
+      <a class="active" href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+      <a href="Register.html">Register</a>
+      <a href="Login.html">Login</a>
+    </div>
+  </div>
+
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img class="slides" src="Images/img1.jpg" style="width:100%">
+      <div class="text">Wheat Crop</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img class="slides" src="Images/img2.jpg" style="width:100%">
+      <div class="text">Large Farms</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img class="slides" src="Images/img3.jpg" style="width:100%">
+      <div class="text">Cultivating Farms</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br>
+  <h2 style="margin:0px 0px 0px 90px; font-size: 35px;">TOOLS AND TECHNOLOGIES</h2>
+  <br>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-user"></i></p>
+        <h3>100+</h3>
+        <p>Tools & Techs</p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-check"></i></p>
+        <h3>10+</h3>
+        <p>AI Techs</p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-smile-o"></i></p>
+        <h3>1 Lakh+</h3>
+        <p>Happy Farmers</p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-coffee"></i></p>
+        <h3>90,000+</h3>
+        <p>Happy Customers</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <section class="services">
+
+    <div class="s-heading">
+      <h1 style="margin-top:40px;"> OUR <font color="#4a90e2">SERVICES</font>
+      </h1>
+      <p>We Provide The Best In Class Servies For Our Customers</p>
+    </div>
+    <div class="s-box-container">
+      <div class="s-box">
+        <div class="bar"></div>
+        <img alt="1" src="Images/crops.png" />
+
+        <h1>Contact Buyer/Seller</h1>
+        <p>Buy Crops or Sell your Crops</p>
+        <a class="s-btn" href="#">More</a>
+      </div>
+      <div class="s-box">
+        <div class="bar"></div>
+        <img alt="2" src="images/automate.png" />
+        <h1>Get a New Machine</h1>
+        <p>Check New and High Tech Machines</p>
+        <a class="s-btn" href="#">More</a>
+      </div>
+      <div class="s-box">
+        <div class="bar"></div>
+        <img alt="3" src="images/consultant.png" />
+
+        <h1>Cosult an Expert</h1>
+
+        <p>Clear all your Doubts and get some Assistance</p>
+        <a class="s-btn" href="#">More</a>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <p class="cp-text">
+    © Copyright 2022 E-TechnoFarm. All rights reserved.
+  </p>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+  
+</body>
+</html>
